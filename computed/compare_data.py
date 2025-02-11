@@ -219,9 +219,8 @@ def draw2(tag='micro'):
 
 
 if __name__ == '__main__':
-    # 示例
     # fluency_score_for_model()
-    # test_str = "你好， 世界123！"
+    test_str = "你好， 世界123！"
     # print(split_string_by_symbols(test_str))  # 应输出['你好', '世界123']
     # compare_score2()
     # draw2()

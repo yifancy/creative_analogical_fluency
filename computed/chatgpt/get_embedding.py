@@ -15,11 +15,11 @@ def get_embedding(word):
     os.environ["https_proxy"] = "http://localhost:10809"
 
     # 数据库连接，获取apikey
-    db = pymysql.connect(host="8.138.1.108",
-                         user="yyy",
+    db = pymysql.connect(host="0.0.0.0",
+                         user="",
                          port=20308,
-                         password="wcaM6zg4532e",
-                         database="goc_test",
+                         password="xxxxx",
+                         database="xxx",
                          charset="utf8mb4")
     cursor = db.cursor()
 

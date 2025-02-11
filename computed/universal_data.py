@@ -1,6 +1,6 @@
 # from bert.similarity_algorithm1_for_bert import bert_compute_cos2, bert_compute_dis2
 import re
-
+import pandas as pd
 from computed.bert.similarity_algorithm1_for_bert import *
 from db.insert_data import init_db
 from computed.word2vec.experiment.compute_word1 import *
@@ -482,7 +482,7 @@ def unformat_data():
             score4 = dispatch_score(word2vec_euc_, word2vec_euc, 1)
 
             update_sql1 = "update questionare_data_model set bert_cos = %s, bert_euc = %s, word2vec_cos = %s, word2vec_euc = %s, bert_cos_score = %s, bert_euc_score = %s, word2vec_cos_score = %s, word2vec_euc_score = %s where id = %s;" % (
-            bert_cos_, bert_euc_, word2vec_cos_, word2vec_euc_, score1, score2, score3, score4, tb_id)
+                bert_cos_, bert_euc_, word2vec_cos_, word2vec_euc_, score1, score2, score3, score4, tb_id)
             print(update_sql1)
             print("<==============>")
             cursor.execute(update_sql1)
